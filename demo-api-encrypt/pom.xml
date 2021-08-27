@@ -4,41 +4,31 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-
     <properties>
         <project.version>1.0-SNAPSHOT</project.version>
     </properties>
     <parent>
         <groupId>xyz.anjude</groupId>
-        <artifactId>java-tiny-demo</artifactId>
+        <artifactId>demo</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
     <artifactId>demo-api-encrypt</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <url>https://blog.csdn.net/fhf2424045058/article/details/109571882</url>
 
     <dependencies>
         <dependency>
             <groupId>xyz.anjude</groupId>
-            <artifactId>demo-common</artifactId>
-            <version>${project.version}</version>
+            <artifactId>common-core</artifactId>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
         <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <groupId>xyz.anjude</groupId>
+            <artifactId>common-web</artifactId>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
 
-        <!-- 代码生成器 -->
-        <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-generator</artifactId>
-        </dependency>
-
-        <!-- velocity 模板引擎, Mybatis Plus 代码生成器需要 -->
-        <dependency>
-            <groupId>org.apache.velocity</groupId>
-            <artifactId>velocity-engine-core</artifactId>
-        </dependency>
     </dependencies>
 
 </project>

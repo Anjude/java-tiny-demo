@@ -62,7 +62,7 @@ public class CodeGenerator {
         PackageConfig pc = new PackageConfig();
         // 包 xyz.anjude
         pc.setParent("xyz.anjude");
-        // 包  xyz.anjude.eduservice
+        // 包  xyz.anjude.encrypt
         // 模块名
         pc.setModuleName("encrypt");
         // 包  xyz.anjude.index.controller
@@ -75,17 +75,26 @@ public class CodeGenerator {
         // 5、策略配置
         StrategyConfig strategy = new StrategyConfig();
 
-        strategy.setInclude("edu_comment");
+//        strategy.setInclude("index_.*");
 
         // 数据库表映射到实体的命名策略
         strategy.setNaming(NamingStrategy.underline_to_camel);
+
         // 生成实体时去掉表前缀
-        strategy.setTablePrefix(pc.getModuleName() + "_");
+        strategy.setTablePrefix("index_");
 
         // 数据库表字段映射到实体的命名策略
         strategy.setColumnNaming(NamingStrategy.underline_to_camel);
         // lombok 模型 @Accessors(chain = true) setter链式操作
         strategy.setEntityLombokModel(true);
+
+        // 逻辑删除字段名
+        strategy.setLogicDeleteFieldName("is_deleted");
+
+        // 去掉布尔值的is_前缀
+        strategy.setEntityBooleanColumnRemoveIsPrefix(true);
+        // 乐观锁列
+        strategy.setVersionFieldName("version");
 
         // restful api风格控制器
         strategy.setRestControllerStyle(true);

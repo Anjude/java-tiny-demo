@@ -6,20 +6,24 @@
 
     <parent>
         <groupId>xyz.anjude</groupId>
-        <artifactId>demo</artifactId>
+        <artifactId>demo-common</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>demo-common</artifactId>
+    <groupId>xyz.anjude</groupId>
+    <artifactId>common-core</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <description>依赖配置</description>
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+        </dependency>
 
-    <packaging>pom</packaging>
-
-    <modules>
-        <module>common-core</module>
-        <module>common-web</module>
-    </modules>
+    </dependencies>
 
 </project>

@@ -15,6 +15,8 @@
     <modules>
         <module>demo-common</module>
         <module>demo-api-encrypt</module>
+        <module>demo-es</module>
+        <module>demo-es</module>
     </modules>
 
     <packaging>pom</packaging>
